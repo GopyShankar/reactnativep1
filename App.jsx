@@ -7,12 +7,14 @@ import StarterIntro from "./screens/StarterIntro";
 import SignUp from "./screens/SignUp"
 import SignIn from "./screens/SignIn"
 import OTP from "./screens/OTP"
+import Home from "./screens/Home"
+import PostALoad from "./screens/PostALoad"
 import ProductScreen from "./screens/ProductScreen"
 
 
 const theme = extendTheme({
   colors: {
-    primary: nbTheme.colors.violet,
+    primary: nbTheme.colors.teal,
   },
 });
 
@@ -22,12 +24,12 @@ export default function App() {
 	return (
 		<NativeBaseProvider theme={theme}>
 			<NavigationContainer>
-				<Drawer.Navigator screenOptions={{ headerShown: false }}>
-					<Drawer.Screen name={"SignUp"} component={SignUp} />
-					<Drawer.Screen name={"SignIn"} component={SignIn} />
-					<Drawer.Screen name={"OTP"} component={OTP} />
-					<Drawer.Screen name={"ProductScreen"} component={ProductScreen} />
-
+				<Drawer.Navigator screenOptions={{ headerStyle: { backgroundColor: "#134e4a", }, headerTintColor: '#fff', headerTitleAlign: 'center', }}>
+					<Drawer.Screen name={"SignIn"} component={SignIn} options={{ headerShown: false,}}  />
+					<Drawer.Screen name={"SignUp"} component={SignUp} options={{ headerShown: false,}} />
+					<Drawer.Screen name={"OTP"} component={OTP} options={{ headerShown: false,}}  />
+					<Drawer.Screen name={"Home"} component={Home} options={{ headerShown: true, title: 'Home'}}  />
+					<Drawer.Screen name={"PostALoad"} component={PostALoad} options={{ headerShown: false, title: 'Post a Load'}}  />
 				</Drawer.Navigator>
 			</NavigationContainer>
 		</NativeBaseProvider>

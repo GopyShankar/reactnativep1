@@ -232,7 +232,7 @@ export default function OtpVerification(props) {
                       bg: "primary.700",
                     }}
                     onPress={() => {
-                      props.navigation.navigate("ProductScreen");
+                      props.navigation.navigate("Home");
                     }}
                   >
                     PROCEED
