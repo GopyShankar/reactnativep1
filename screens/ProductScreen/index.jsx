@@ -1,34 +1,6 @@
 import React from "react";
-import {
-  Box,
-  HStack,
-  Icon,
-  Text,
-  VStack,
-  StatusBar,
-  Avatar,
-  Image,
-  Input,
-  useColorMode,
-  ScrollView,
-  Pressable,
-  Center,
-  Divider,
-  Button,
-  IconButton,
-  Stack,
-  Link,
-  Hidden,
-  Menu,
-} from "native-base";
-import {
-  AntDesign,
-  Entypo,
-  EvilIcons,
-  Feather,
-  FontAwesome,
-  Ionicons,
-} from "@expo/vector-icons";
+import { Box, HStack, Icon, Text, VStack, StatusBar, Avatar, Image, Input, useColorMode, ScrollView, Pressable, Center, Divider, Button, IconButton, Stack, Link, Hidden, Menu, } from "native-base";
+import { AntDesign, Entypo, EvilIcons, Feather, FontAwesome, Ionicons, } from "@expo/vector-icons";
 const categories = [
   {
     category: "New Born",
@@ -69,53 +41,11 @@ const reviews = [
 
 const AddToCartButton = (props) => {
   return (
-    <HStack
-      mt="5"
-      space="4"
-      alignItems="center"
-      display={{
-        base: props.base,
-        md: props.md,
-      }}
-    >
-      <Center
-        p="2"
-        borderRadius="4"
-        _light={{
-          bg: "primary.100",
-        }}
-        _dark={{
-          bg: "coolGray.900",
-        }}
-      >
-        <Icon
-          size="8"
-          name="heart"
-          as={EvilIcons}
-          _dark={{
-            color: "violet.500",
-          }}
-          _light={{
-            color: "primary.900",
-          }}
-        />
+    <HStack mt="5" space="4" alignItems="center" display={{ base: props.base, md: props.md,}} >
+      <Center p="2" borderRadius="4" _light={{ bg: "primary.100", }} _dark={{ bg: "coolGray.900", }} >
+        <Icon size="8" name="heart" as={EvilIcons} _dark={{ color: "violet.500", }} _light={{ color: "primary.900", }} />
       </Center>
-      <Button
-        flex={1}
-        h="100%"
-        py={3}
-        borderRadius="4"
-        _dark={{
-          bg: "violet.700",
-        }}
-        _light={{
-          bg: "primary.900",
-        }}
-        _text={{
-          fontSize: "md",
-          fontWeight: "semibold",
-        }}
-      >
+      <Button flex={1} h="100%" py={3} borderRadius="4" _dark={{ bg: "violet.700", }} _light={{ bg: "primary.900", }} _text={{ fontSize: "md", fontWeight: "semibold", }} >
         Add To Cart
       </Button>
     </HStack>
@@ -128,56 +58,16 @@ export default function (props) {
   const { colorMode } = useColorMode();
   return (
     <>
-      <StatusBar
-        translucent
-        backgroundColor="transparent"
-        barStyle="light-content"
-      />
-      <Box
-        safeAreaTop
-        _light={{
-          bg: "primary.900",
-        }}
-        _dark={{
-          bg: "coolGray.900",
-        }}
-      />
-      <VStack
-        flex={1}
-        _light={{
-          bg: "primary.50",
-        }}
-        _dark={{
-          bg: "customGray",
-        }}
-      >
+      <StatusBar translucent backgroundColor="transparent" barStyle="light-content" />
+      <Box safeAreaTop _light={{ bg: "primary.900", }} _dark={{ bg: "coolGray.900", }} />
+      <VStack flex={1} _light={{ bg: "primary.50", }} _dark={{ bg: "customGray", }} >
         <Box
-          px={{
-            base: "4",
-            md: "8",
-          }}
-          pt={{
-            base: "4",
-            md: "3",
-          }}
-          pb={{
-            base: "5",
-            md: "3",
-          }}
-          borderBottomWidth={{
-            md: "1",
-          }}
-          _dark={{
-            bg: "coolGray.900",
-            borderColor: "coolGray.700",
-          }}
-          _light={{
-            bg: {
-              base: "primary.900",
-              md: "white",
-            },
-            borderColor: "coolGray.200",
-          }}
+          px={{ base: "4", md: "8", }}
+          pt={{ base: "4", md: "3", }}
+          pb={{ base: "5", md: "3", }}
+          borderBottomWidth={{ md: "1", }}
+          _dark={{ bg: "coolGray.900", borderColor: "coolGray.700", }}
+          _light={{ bg: { base: "primary.900", md: "white", }, borderColor: "coolGray.200", }}
         >
           {/* Mobile header */}
           <Hidden from="md">
@@ -196,7 +86,7 @@ export default function (props) {
                   }
                 />
                 <Text color="coolGray.50" fontSize="lg">
-                  Body Suit
+                  Post a load
                 </Text>
               </HStack>
             </HStack>

@@ -29,7 +29,7 @@ export default function App() {
 					<Drawer.Screen name={"SignUp"} component={SignUp} options={{ headerShown: false,}} />
 					<Drawer.Screen name={"OTP"} component={OTP} options={{ headerShown: false,}}  />
 					<Drawer.Screen name={"Home"} component={Home} options={{ headerShown: true, title: 'Home'}}  />
-					<Drawer.Screen name={"PostALoad"} component={PostALoad} options={{ headerShown: false, title: 'Post a Load'}}  />
+					<Drawer.Screen name={"PostALoad"} component={PostALoad} options={{ headerShown: true, title: 'Post a Load'}}  />
 				</Drawer.Navigator>
 			</NavigationContainer>
 		</NativeBaseProvider>
